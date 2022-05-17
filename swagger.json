@@ -15,6 +15,18 @@
     {
       "name": "Events",
       "description": "Endpoints for Events"
+    },
+    {
+      "name": "Documents",
+      "description": "Endpoints for Documents"
+    },
+    {
+      "name": "Audio",
+      "description": "Endpoints for Audio"
+    },
+    {
+      "name": "Video",
+      "description": "Endpoints for Video"
     }
   ],
   "schemes": [
@@ -39,36 +51,7 @@
           "Users"
         ],
         "description": "",
-        "parameters": [{
-          "name": "body",
-          "in": "body",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "firstName": {
-                "example": "any"
-              },
-              "lastName": {
-                "example": "any"
-              },
-              "email": {
-                "example": "any"
-              },
-              "age": {
-                "example": "any"
-              },
-              "phone": {
-                "example": "any"
-              },
-              "eventsAttended": {
-                "example": "any"
-              },
-              "gender": {
-                "example": "any"
-              }
-            }
-          }
-        }],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -183,30 +166,7 @@
           "Events"
         ],
         "description": "",
-        "parameters": [{
-          "name": "body",
-          "in": "body",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "eventName": {
-                "example": "any"
-              },
-              "participants": {
-                "example": "any"
-              },
-              "location": {
-                "example": "any"
-              },
-              "description": {
-                "example": "any"
-              },
-              "host": {
-                "example": "any"
-              }
-            }
-          }
-        }],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -295,6 +255,291 @@
             "description": "OK"
           }
         }
+      }
+    },
+    "/audio/": {
+      "get": {
+        "tags": [
+          "Audio"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Audio"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/audio/{id}": {
+      "get": {
+        "tags": [
+          "Audio"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Audio"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "audioName": {
+                  "example": "any"
+                },
+                "participants": {
+                  "example": "any"
+                },
+                "location": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "host": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Audio"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/video/": {
+      "get": {
+        "tags": [
+          "Video"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Video"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/video/{id}": {
+      "get": {
+        "tags": [
+          "Video"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Video"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "VideoName": {
+                  "example": "any"
+                },
+                "videoName": {
+                  "example": "any"
+                },
+                "participants": {
+                  "example": "any"
+                },
+                "location": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "host": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Video"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/documents/": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/documents/{id}": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
       }
     }
   }

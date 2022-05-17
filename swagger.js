@@ -16,6 +16,18 @@ const doc = {
     {
       name: 'Events',
       description: 'Endpoints for Events'
+    },
+    {
+      name: 'Documents',
+      description: 'Endpoints for Documents'
+    },
+    {
+      name: 'Audio',
+      description: 'Endpoints for Audio'
+    },
+    {
+      name: 'Video',
+      description: 'Endpoints for Video'
     }
   ]
 };
