@@ -1,11 +1,11 @@
 const express = require('express');
-const documentsController = require('../controllers/documents');
+const documentController = require('../controllers/documents');
 const router = express.Router();
 
-router.get('/', documentsController.getAll);
-router.get('/:id', documentsController.getSingle);
-router.post('/', documentsController.create_event);
-router.put('/:id', documentsController.update_event);
-router.delete('/:id', documentsController.delete_event);
+router.get('/', documentController.getAll);
+router.get('/:id', documentController.getSingle);
+router.post('/', documentController.create_document);
+router.put('/:id', documentController.update_document);
+router.delete('/:id', documentController.delete_document);
 
 module.exports = router;

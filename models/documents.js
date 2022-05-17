@@ -1,14 +1,14 @@
 const array = require('@hapi/joi/lib/types/array');
 const mongoose = require('mongoose');
 
-const DocumentsSchema = mongoose.Schema({
+const DocumentSchema = mongoose.Schema({
   title: { type: String },
   documentType: { type: String },
   description: { type: String },
   
 });
 
-module.exports = mongoose.model('Documents', DocumentsSchema);
+module.exports = mongoose.model('Documents', DocumentSchema);
 
 // Audio:
 // Title

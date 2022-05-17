@@ -5,6 +5,6 @@ router.use('/users', require('./users'));
 router.use('/events', require('./events'));
 router.use('/audio', require('./audio'));
 router.use('/video', require('./video'));
-//router.use('/documents', require('./documents.js'));
+router.use('/documents', require('./documents'));
 
 module.exports = router;
