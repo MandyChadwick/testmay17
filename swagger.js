@@ -3,9 +3,9 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'Events API',
-    description: 'API for creating events and registering to attend them.'
+    description: 'API for a Media Library.'
   },
-  //host: 'cse341-project02-mw.herokuapp.com',
+  //host: 'app-name.herokuapp.com',
    host: 'localhost:8080',
   schemes: ['http'],
   tags: [
